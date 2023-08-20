@@ -1,0 +1,89 @@
+============================================================QUESTION===========================================================
+
+Assume You Have A Fan Object.
+
+And it has no_Of_Wings,color,cost, and brand.
+
+Fan can rotate and it can blow_Air.
+
+Your Task is to Create 3 fan objects access its data members and give the values to it . You should also print the data mambers on the console.
+
+You should also access its member functions after printing data members on the console.
+
+Note that : Fan Can Certainly Rotate But User Should Know Which Color Which Brand And How Many Wings Fan is Rotating and what is the cost of it .
+
+If blow_Air is accessed then fan can certainly bow air but which color fan is blowing air, the user should know it.
+
+=============================================================SOLUTION========================================================
+----------------------------------------------------------BLUEPRINT---------------------------------------------------------
+package com.company;
+
+public class Fan {
+	String brand;
+	String color;
+	int cost;
+	int no_of_wings;
+	
+	void rotate()
+	{
+		System.out.println("A "+color+" color fan is rotating with "+no_of_wings+" Wings which costs around "+cost+" rupees made by "+brand+" brand ");
+		System.out.println("brand: "+brand+" color: "+color+" cost: "+ cost + " number of wings: "+no_of_wings);
+	}
+	
+	void blowAir()
+	{
+		System.out.println("A "+color+ " colored fan is rotating:");
+		System.out.println("=======================================================================================");
+	}
+
+}
+
+-------------------------------------------------------------main()------------------------------------------------------------
+package com.company;
+
+public class FanApp {
+	public static void main(String[] args)
+	{
+		Fan fan1 = new Fan();
+		Fan fan2 = new Fan();
+		Fan fan3 = new Fan();
+		
+		fan1.brand = "Havels";
+		fan1.color = "Blue";
+		fan1.cost = 4000;
+		fan1.no_of_wings=4;
+		fan1.rotate();
+		fan1.blowAir();
+		
+		
+		fan2.brand = "Crompton";
+		fan2.color = "Yellow";
+		fan2.cost = 3500;
+		fan2.no_of_wings=4;
+		fan2.rotate();
+		fan2.blowAir();
+		
+		fan3.brand = "USHA";
+		fan3.color = "White";
+		fan3.cost = 3000;
+		fan3.no_of_wings=3;
+		fan3.rotate();
+		fan3.blowAir();
+	}
+
+}
+
+=========================================================OUTPUT==============================================================
+
+A Blue color fan is rotating with 4 Wings which costs around 4000 rupees made by Havels brand 
+brand: Havels color: Blue cost: 4000 number of wings: 4
+A Blue colored fan is rotating:
+=======================================================================================
+A Yellow color fan is rotating with 4 Wings which costs around 3500 rupees made by Crompton brand 
+brand: Crompton color: Yellow cost: 3500 number of wings: 4
+A Yellow colored fan is rotating:
+=======================================================================================
+A White color fan is rotating with 3 Wings which costs around 3000 rupees made by USHA brand 
+brand: USHA color: White cost: 3000 number of wings: 3
+A White colored fan is rotating:
+=======================================================================================
