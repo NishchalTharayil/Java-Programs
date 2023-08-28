@@ -1,0 +1,67 @@
+===========================================================QUESTION==========================================================
+
+Create a program that finds the Greatest Common Divisor (GCD) of two numbers. The program should accept two integers 'a' and 'b' as input.
+
+Boiler Plate Code:
+
+public class Main
+
+{
+
+public static void findGCD(int a, int b)
+
+{
+
+// your code here
+
+}
+
+public static void main(String[] args)
+
+{
+
+findGCD(36, 60);
+
+}
+
+}
+
+Sample Input: 36, 60
+
+Sample Output: 12
+
+=============================================================SOLUTION========================================================
+
+package com.company;
+import java.util.Scanner;
+
+public class GCD {
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		findGCD(a,b);
+		scan.close();
+		
+	}
+	
+	public static void findGCD(int a ,int b)
+	{
+		while(b!=0)
+		{
+			int rem = a % b;
+			a = b;
+			b = rem;
+		}
+		System.out.println(a);
+	}
+
+}
+
+==============================================================OUTPUT==========================================================
+
+36
+60
+12
+
