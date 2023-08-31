@@ -1,0 +1,51 @@
+======================================================QUESTION===============================================================
+
+Write a java program to print the result of a number when it is raised to the power of n
+
+======================================================SOLUTION===============================================================
+
+-------------------------------------------------------Class 1---------------------------------------------------------------
+
+package com.company;
+import java.util.Scanner;
+
+public class Power {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter an Number: ");
+		int n = scan.nextInt();
+		System.out.print("Enter Square: ");
+		int m = scan.nextInt();
+		PowerApp powerApp = new PowerApp();
+		int res = powerApp.powerOfNumber(n,m);
+		System.out.println(res);
+	}
+	
+
+}
+
+-------------------------------------------------------Class 2---------------------------------------------------------------
+
+package com.company;
+
+public class PowerApp {
+	int powerOfNumber(int n, int m)
+	{
+		int total = 1;
+		for(int i = 1;i<=m;i++)
+		{
+			total = total * n;
+		}
+		
+		return total;
+	}
+
+}
+
+===========================================================OUTPUT============================================================
+
+Enter an Number: 5
+Enter Square: 5
+3125

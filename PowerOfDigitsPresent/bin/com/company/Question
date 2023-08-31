@@ -1,0 +1,59 @@
+===============================================QUESTION======================================================================
+
+Write a java program to print the result of a number when it is raised to the power of number of digits in the number
+
+======================================================SOLUTION===============================================================
+
+-------------------------------------------------------CLASS 1--------------------------------------------------------------
+
+package com.company;
+import java.util.Scanner;
+public class PowerOfDigits {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter an Number: ");
+		int n = scan.nextInt();
+		PowerOfDigitsApp power = new PowerOfDigitsApp();
+		int res = power.powerOfNumber(n);
+		total(n,res);
+	}
+	public static void total(int n, int m)
+	{
+		int total = 1;
+		for(int i = 1;i<=m; i++)
+		{
+			total = total * n;
+		}	
+		
+		System.out.println(total);
+	}	
+
+}
+
+--------------------------------------------------------CLASS 2--------------------------------------------------------------
+
+package com.company;
+
+public class PowerOfDigitsApp 
+{
+	int powerOfNumber(int n)
+	{
+		int count = 0;
+		while(n>0)
+		{
+			n = n/10;
+			count++;	
+		}
+		return count;
+
+	}
+	
+	
+}
+
+============================================================OUTPUT===========================================================
+
+Enter an Number: 12
+144

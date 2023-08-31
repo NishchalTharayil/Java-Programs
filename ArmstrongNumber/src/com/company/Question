@@ -1,0 +1,64 @@
+========================================================QUESTION=============================================================
+
+Check whether the given number is Armstrong Number or not
+
+========================================================SOLUTION=============================================================
+--------------------------------------------------------CLASS 1--------------------------------------------------------------
+
+package com.company;
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a Number: ");
+		int n = scan.nextInt();
+		ArmStrongApp armstrong = new ArmStrongApp();
+		int res = armstrong.armStrong(n);
+		boolean result = armstrong.checkArmstrong(n,res);
+		System.out.println(result);
+	}
+}
+
+---------------------------------------------------------CLASS 2-------------------------------------------------------------
+
+package com.company;
+
+public class ArmStrongApp 
+{
+	int armStrong(int n)
+	{
+		int cube = 0;
+		int m = 0;
+		while(n>0)
+		{
+			m = n % 10;
+			n = n / 10;
+			cube = cube +(m * m * m);
+		}
+		return cube;
+	}
+	
+	boolean checkArmstrong(int n,int res)
+	{
+		if(n == res)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+}
+
+==============================================================OUTPUT=========================================================
+
+Enter a Number: 153
+true
+
+Enter a Number: 400
+false

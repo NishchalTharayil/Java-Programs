@@ -1,0 +1,53 @@
+===========================================================QUESTION========================================================
+
+Write a java Program To Count the number of digits of present in a number
+
+===========================================================SOLUTION========================================================
+
+-----------------------------------------------------------CLASS 1---------------------------------------------------------
+
+package com.company;
+import java.util.Scanner;
+
+public class NumbersPresent {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = scan.nextInt();
+		NumbersPresentApp numberApp = new NumbersPresentApp();
+		int total =numberApp.numbers(n);
+		System.out.println(total);
+		scan.close();
+
+	}
+
+}
+
+-----------------------------------------------------------CLASS 2---------------------------------------------------------
+
+package com.company;
+
+public class NumbersPresentApp {
+	int numbers(int n)
+	{
+		int m = 0;
+		int count =0;
+		while(n>0)
+		{
+			m = n % 10;
+			n = n / 10;
+			count++;
+		}
+		return count;
+	}
+
+}
+
+=============================================================OUTPUT========================================================
+
+Enter a number: 
+123456
+6
+
