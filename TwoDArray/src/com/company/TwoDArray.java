@@ -1,0 +1,29 @@
+package com.company;
+
+public class TwoDArray {
+
+	public static void main(String[] args) 
+	{
+		int[][] marks1 = new int[2][4];
+		marks1[0][0] = 101;
+		marks1[0][1] = 102;
+		marks1[0][2] = 103;
+		marks1[0][3] = 104;
+		marks1[1][0] = 105;
+		marks1[1][1] = 106;
+		marks1[1][2] = 107;
+		marks1[1][3] = 108;
+		for(int i = 0;i<marks1.length;i++) 
+		{
+			for(int j = 0;j<marks1[i].length;j++)
+			{
+				System.out.print(marks1[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		
+		
+	}
+
+}
