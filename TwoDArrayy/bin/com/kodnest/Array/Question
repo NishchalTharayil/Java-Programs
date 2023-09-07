@@ -1,0 +1,108 @@
+==========================================================QUESTION============================================================
+
+In a Banglore City, There are 5 banks and 30 customers. So you have to write a java program to store the names of the customer i.e., 6 customers in each bank
+
+==========================================================SOLUTION==============================================================
+
+package com.kodnest.Array;
+import java.util.Scanner;
+
+public class Banks {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		String [][]arr=new String[5][6];
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			for(int j = 0;j<=arr[i].length-1;j++)
+			{
+				System.out.println("Enter the bank "+i+" Customer Name "+j);
+				arr[i][j]=scan.next();
+			}
+		}
+		
+		System.out.println("The Customers of All Banks are: ");
+		
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			for(int j = 0;j<=arr[i].length-1;j++)
+			{
+				System.out.print(arr[i][j]+" || ");
+			}
+			System.out.println();
+
+	}
+}
+}
+
+
+========================================================OUTPUT==================================================================
+
+Enter the bank 0 Customer Name 0
+Nish1
+Enter the bank 0 Customer Name 1
+Nish2
+Enter the bank 0 Customer Name 2
+Nish3
+Enter the bank 0 Customer Name 3
+Nish4
+Enter the bank 0 Customer Name 4
+Nish5
+Enter the bank 0 Customer Name 5
+Nish6
+Enter the bank 1 Customer Name 0
+Rakshi1
+Enter the bank 1 Customer Name 1
+Rakshi2
+Enter the bank 1 Customer Name 2
+Rakshi3
+Enter the bank 1 Customer Name 3
+Rakshi4
+Enter the bank 1 Customer Name 4
+Rakshi5
+Enter the bank 1 Customer Name 5
+Rakshi6
+Enter the bank 2 Customer Name 0
+Nithi1
+Enter the bank 2 Customer Name 1
+Nithi2
+Enter the bank 2 Customer Name 2
+Nithi3
+Enter the bank 2 Customer Name 3
+Nithi4
+Enter the bank 2 Customer Name 4
+Nithi5
+Enter the bank 2 Customer Name 5
+Nithi6
+Enter the bank 3 Customer Name 0
+Nikhi1
+Enter the bank 3 Customer Name 1
+Nikhi2
+Enter the bank 3 Customer Name 2
+Nikhi3
+Enter the bank 3 Customer Name 3
+Nikhi4
+Enter the bank 3 Customer Name 4
+Nikhi5
+Enter the bank 3 Customer Name 5
+Nikhi6
+Enter the bank 4 Customer Name 0
+Arpi1
+Enter the bank 4 Customer Name 1
+Arpi2
+Enter the bank 4 Customer Name 2
+Arpi3
+Enter the bank 4 Customer Name 3
+Arpi4
+Enter the bank 4 Customer Name 4
+Arpi5
+Enter the bank 4 Customer Name 5
+Arpi6
+
+The Customers of All Banks are: 
+Nish1 || Nish2 || Nish3 || Nish4 || Nish5 || Nish6 || 
+Rakshi1 || Rakshi2 || Rakshi3 || Rakshi4 || Rakshi5 || Rakshi6 || 
+Nithi1 || Nithi2 || Nithi3 || Nithi4 || Nithi5 || Nithi6 || 
+Nikhi1 || Nikhi2 || Nikhi3 || Nikhi4 || Nikhi5 || Nikhi6 || 
+Arpi1 || Arpi2 || Arpi3 || Arpi4 || Arpi5 || Arpi6 || 
