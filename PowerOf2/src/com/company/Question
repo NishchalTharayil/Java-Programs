@@ -1,0 +1,42 @@
+=========================================================== QUESTION ========================================================
+
+Create a java program to calculate the power of 2 to the given number.
+
+=========================================================== SOLUTION ========================================================
+
+---------------------------------------------------------- CLASS-1 ----------------------------------------------------------
+
+package com.company;
+import java.util.Scanner;
+
+public class Power {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a Number: ");
+		int n = scan.nextInt();
+		PowerApp power = new PowerApp();
+		int res = power.powerOf(n);
+		System.out.println(res);
+		scan.close();
+	}
+
+}
+
+----------------------------------------------------------- CLASS-2 ---------------------------------------------------------
+
+package com.company;
+
+public class PowerApp {
+	int powerOf(int n)
+	{
+		return n * n;
+	}
+
+}
+
+=============================================================== OUTPUT =======================================================
+
+Enter a Number: 12
+144
