@@ -1,0 +1,107 @@
+=========================================================== QUESTION ===========================================================
+
+Store the marks of the Students
+
+Scenario:
+
+School		Class		Students
+
+0			  0			 0 1 2
+			  1			 0 1 2 3	
+			  
+1			  0			 0 1 2
+			  1			 0 1
+			  2			 0 1 2 3
+
+
+============================================================ SOLUTION ==========================================================
+
+package com.Kodnest.Array;
+import java.util.Scanner;
+
+public class ThreeDArray {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		int arr[][][]= new int[2][][];
+		arr[0] = new int[2][];
+		arr[1] = new int[3][];
+		arr[0][0]=new int[3];
+		arr[0][1]=new int[4];
+		arr[1][0]=new int[3];
+		arr[1][1]=new int[2];
+		arr[1][2]=new int[4];
+		
+		for(int i =0;i<=arr.length-1;i++)
+		{
+			for(int j =0;j<=arr[i].length-1;j++)
+			{
+				for(int k = 0;k <= arr[i][j].length-1;k++)
+				{
+					System.out.println("Enter the school "+(i+1)+" class "+(j+1)+" Student "+(k+1)+ " Marks: ");
+					arr[i][j][k] = scan.nextInt();
+				}
+			}
+			
+		}
+		System.out.println("The Marks of Students Respective to their Classes and Schools are: ");
+		for(int i =0;i<=arr.length-1;i++)
+		{
+			for(int j =0;j<=arr[i].length-1;j++)
+			{
+				for(int k = 0;k <= arr[i][j].length-1;k++)
+				{
+					System.out.print(arr[i][j][k]+" | ");
+				}
+				System.out.println();
+			}
+			System.out.println();
+		}
+		
+	}
+
+}
+
+============================================================= OUTPUT  ==========================================================
+
+Enter the school 1 class 1 Student 1 Marks: 
+85
+Enter the school 1 class 1 Student 2 Marks: 
+86
+Enter the school 1 class 1 Student 3 Marks: 
+92
+Enter the school 1 class 2 Student 1 Marks: 
+95
+Enter the school 1 class 2 Student 2 Marks: 
+96
+Enter the school 1 class 2 Student 3 Marks: 
+84
+Enter the school 1 class 2 Student 4 Marks: 
+87
+Enter the school 2 class 1 Student 1 Marks: 
+89
+Enter the school 2 class 1 Student 2 Marks: 
+78
+Enter the school 2 class 1 Student 3 Marks: 
+89
+Enter the school 2 class 2 Student 1 Marks: 
+87
+Enter the school 2 class 2 Student 2 Marks: 
+85
+Enter the school 2 class 3 Student 1 Marks: 
+89
+Enter the school 2 class 3 Student 2 Marks: 
+87
+Enter the school 2 class 3 Student 3 Marks: 
+67
+Enter the school 2 class 3 Student 4 Marks: 
+68
+The Marks of Students Respective to their Classes and Schools are: 
+85 | 86 | 92 | 
+95 | 96 | 84 | 87 | 
+
+89 | 78 | 89 | 
+87 | 85 | 
+89 | 87 | 67 | 68 | 
+
