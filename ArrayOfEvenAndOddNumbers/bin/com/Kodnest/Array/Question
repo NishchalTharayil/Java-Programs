@@ -1,0 +1,157 @@
+======================================================= QUESTIONS ==============================================================
+
+Question -1 
+
+Create an Array using Java to print only Even numbers from the Array.
+
+Question -2 
+
+Create an Array using Java to print only Odd numbers from the Array.
+
+Question -3 
+
+Create an Array using Java to print only numbers whcih are multiple of 5 from the Array.
+
+======================================================= SOLUTION ===============================================================
+
+------------------------------------------------------- SOLUTION-1 -------------------------------------------------------------
+
+package com.Kodnest.Array;
+import java.util.Scanner;
+
+public class EvenNumbersArray {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of the Array: ");
+		int arr[] = new int[scan.nextInt()];
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			arr[i] = scan.nextInt();
+		}
+		
+		System.out.println("Even number Elements are: ");
+		for(int i =0 ; i<=arr.length-1;i++)
+		{
+			if(arr[i] % 2 ==0)
+			{
+				System.out.print(arr[i]+" ");
+			}
+		}
+		
+		
+	}
+
+}
+
+========================================================= OUTPUT-1 =============================================================
+
+Enter the size of the Array: 
+8
+Enter 8 values: 
+12
+46
+57
+89
+12
+14
+4
+27
+Even number Elements are: 
+12 46 12 14 4 
+
+--------------------------------------------------------- SOLUTION-2 -----------------------------------------------------------
+
+package com.Kodnest.Array;
+import java.util.Scanner;
+
+public class OddNumbersArray {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of the Array: ");
+		int arr[] = new int[scan.nextInt()];
+		System.out.println("Enter "+arr.length+" values: ");
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			arr[i] = scan.nextInt();
+		}
+		
+		System.out.println("Odd number Elements are: ");
+		for(int i =0 ; i<=arr.length-1;i++)
+		{
+			if(arr[i] % 2 !=0)
+			{
+				System.out.print(arr[i]+" ");
+			}
+		}
+		
+		
+	}
+
+}
+
+========================================================= OUTPUT-2==============================================================
+
+Enter the size of the Array: 
+10
+Enter 10 values: 
+21
+26
+74
+852
+49
+76
+45
+246
+102
+1017
+Odd number Elements are: 
+21 49 45 1017 
+
+------------------------------------------------------------- SOLUTION-3 ------------------------------------------------------
+
+package com.Kodnest.Array;
+import java.util.Scanner;
+
+public class MultipleOf5Array {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of the Array: ");
+		int arr[] = new int[scan.nextInt()];
+		System.out.println("Enter "+arr.length+" values: ");
+		for(int i = 0;i<=arr.length-1;i++)
+		{
+			arr[i] = scan.nextInt();
+		}
+		
+		System.out.println(" Elements that are divisible by 5 are: ");
+		for(int i =0 ; i<=arr.length-1;i++)
+		{
+			if(arr[i] % 5 ==0)
+			{
+				System.out.print(arr[i]+" ");
+			}
+		}
+		
+		
+	}
+
+}
+
+============================================================ OUTPUT-3 =========================================================
+
+Enter the size of the Array: 
+5
+Enter 5 values: 
+10
+165
+487
+496
+100
+Elements that are divisible by 5 are: 
+10 165 100 
