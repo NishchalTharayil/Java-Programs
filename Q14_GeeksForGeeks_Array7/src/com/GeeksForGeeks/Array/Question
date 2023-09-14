@@ -1,0 +1,114 @@
+============================================================== QUESTION ========================================================
+
+For a given 2D square matrix of size N*N, the task is to find the sum of elements in the Principal and Secondary diagonals. For example, analyze the following 4 × 4 input matrix.
+
+a00 a01 a02 a03
+a10 a11 a12 a13
+a20 a21 a22 a23
+a30 a31 a32 a33
+
+Example:
+
+Input 1 :  	  6 7 3 4
+              8 9 2 1
+              1 2 9 6
+              6 5 7 2
+              
+Output 1 : Principal Diagonal: 26
+           Secondary Diagonal: 14
+============================================================= SOLUTION =========================================================
+
+package com.GeeksForGeeks.Array;
+import java.util.Scanner;
+
+public class SumOfDiagnolElements {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of Array 1 and Array 2: ");
+		int arr1[][] = new int[scan.nextInt()][scan.nextInt()];
+		
+		for(int i = 0;i<=arr1.length-1;i++)
+		{	
+			for(int j =0;j<=arr1[i].length-1;j++)
+			{
+				System.out.println("Enter the Element Array "+(i+1)+" Position "+(j+1));
+				arr1[i][j] = scan.nextInt();
+			}
+		}
+		
+		int sum = 0;
+		for(int i =0;i<=arr1.length-1;i++)
+		{
+			for(int j =0;j<=arr1[i].length-1;j++)
+			{
+				if(arr1[i]==arr1[j]) 
+				{
+					sum = sum + arr1[i][j];
+				}
+			}
+		}
+		int sum1=0;
+		System.out.println("The sum of primary Diagnol is: "+ sum);
+		for(int i = 0;i<=arr1.length-1;i++)
+		{
+			for(int j =arr1[i].length-1;j>=0;j--)
+			{
+				if((i+j)==(arr1.length-1))
+				{
+					sum1 = sum1 + arr1[i][j];
+				}
+				
+			}
+		}
+		System.out.println("The sum of Secondary Diagnol is: "+sum1);
+		
+	
+		
+		
+		
+
+	}
+
+}
+
+=============================================================== OUTPUT =========================================================
+
+Enter the size of Array 1 and Array 2: 
+4
+4
+Enter the Element Array 1 Position 1
+6
+Enter the Element Array 1 Position 2
+7
+Enter the Element Array 1 Position 3
+3
+Enter the Element Array 1 Position 4
+4
+Enter the Element Array 2 Position 1
+8
+Enter the Element Array 2 Position 2
+9
+Enter the Element Array 2 Position 3
+2
+Enter the Element Array 2 Position 4
+1
+Enter the Element Array 3 Position 1
+1
+Enter the Element Array 3 Position 2
+2
+Enter the Element Array 3 Position 3
+9
+Enter the Element Array 3 Position 4
+6
+Enter the Element Array 4 Position 1
+6
+Enter the Element Array 4 Position 2
+5
+Enter the Element Array 4 Position 3
+7
+Enter the Element Array 4 Position 4
+2
+The sum of primary Diagnol is: 26
+The sum of Secondary Diagnol is: 14
