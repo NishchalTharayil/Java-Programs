@@ -1,0 +1,133 @@
+=============================================================== QUESTION =======================================================
+
+Given two given arrays of equal length, the task is to find if given arrays are equal or not. Two arrays are said to be equal if both of them contain the same set of elements and in the same order.
+
+============================================================== SOLUTION ========================================================
+
+package com.GeeksForGeeks.Array;
+import java.util.Scanner;
+
+public class ArraysEqualOrNot {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of Array1: ");
+		int arr1[]= new int[scan.nextInt()];
+		System.out.println("Enter the size of Array2: ");
+		int arr2[]= new int[scan.nextInt()];
+		
+		System.out.println("Enter the Elements of Array1: ");
+		for(int i =0;i<=arr1.length-1;i++)
+		{
+			arr1[i] = scan.nextInt();
+		}
+		
+		System.out.println("Enter the Elements of Array2: ");
+		for(int i =0;i<=arr2.length-1;i++)
+		{
+			arr2[i] = scan.nextInt();
+		}
+		
+		System.out.println("Array 1 Elements are: ");
+		for(int i = 0;i <= arr1.length-1;i++)
+		{
+			System.out.print(arr1[i]+ " | ");
+		}
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("Array 2 Elements are: ");
+		for(int i = 0;i <= arr2.length-1;i++)
+		{
+			System.out.print(arr2[i]+" | ");
+		}
+		System.out.println();
+		System.out.println();
+		
+		int count = 0;
+		int count1 = 0;
+		
+		if(arr1.length==arr2.length)
+		{
+			for(int i =0;i<=arr1.length-1;i++)
+			{
+				if(arr1[i]==arr2[i])
+				{
+					count++;
+					if(count==arr1.length)
+					{
+						System.out.println("Yes! The elements of both the arrays are same.");
+					}
+				}
+				else 
+				{
+					System.out.println("No! The elements of both the arrays are not equal.");
+					return;
+				}
+				
+			}
+		}
+		else 
+		{
+			System.out.println("No! The elemnts of the Arrays are not equal.");
+			
+		}
+		
+
+	}
+
+}
+
+============================================================= OUTPUT ===========================================================
+
+--------------------------------------------------------- SCENARIO-1 ----------------------------------------------------------
+Enter the size of Array1: 
+5
+Enter the size of Array2: 
+5
+Enter the Elements of Array1: 
+1
+2
+5
+4
+0
+Enter the Elements of Array2: 
+1
+2
+5
+4
+0
+Array 1 Elements are: 
+1 | 2 | 5 | 4 | 0 | 
+
+Array 2 Elements are: 
+1 | 2 | 5 | 4 | 0 | 
+
+Yes! The elements of both the arrays are same.
+
+--------------------------------------------------------- Scenario-2 -----------------------------------------------------------
+
+Enter the size of Array1: 
+5
+Enter the size of Array2: 
+5
+Enter the Elements of Array1: 
+11
+12
+13
+14
+15
+Enter the Elements of Array2: 
+11
+12
+13
+14
+16
+Array 1 Elements are: 
+11 | 12 | 13 | 14 | 15 | 
+
+Array 2 Elements are: 
+11 | 12 | 13 | 14 | 16 | 
+
+No! The elements of both the arrays are not equal.

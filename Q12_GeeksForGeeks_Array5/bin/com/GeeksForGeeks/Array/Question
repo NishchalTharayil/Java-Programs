@@ -1,0 +1,77 @@
+===================================================== QUESTION =================================================================
+
+Write a java program to search an element whether it's present or not.
+
+===================================================== SOLUTION =================================================================
+
+package com.GeeksForGeeks.Array;
+import java.util.Scanner;
+
+public class SearchElement {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the size of an Array: ");
+		int num1 = scan.nextInt();
+		int arrr[] = new int[num1];
+		
+		System.out.println("Enter "+num1+" Elements to the Array: ");
+		for(int i = 0;i <= arrr.length-1; i++)
+		{
+			arrr[i] = scan.nextInt();
+		}
+		
+		System.out.println("Enter an element to search in it: ");
+		int search = scan.nextInt();
+		int count =0;
+		for(int i =0;i <= arrr.length-1; i++)
+		{
+			if(arrr[i] == search)
+			{
+				count++;
+			}
+		}
+		if(count>0)
+		{
+			System.out.println("This element is present: ");
+		}
+		else
+		{
+			System.out.println("This element is not present: ");
+		}
+		
+		
+	}
+
+}
+
+========================================================= OUTPUT ===============================================================
+
+Output-1:
+
+Enter the size of an Array: 
+5
+Enter 5 Elements to the Array: 
+10
+20
+30
+40
+50
+Enter an element to search in it: 
+10
+This element is present! 
+
+Output-2:
+
+Enter the size of an Array: 
+5
+Enter 5 Elements to the Array: 
+10
+20
+30
+40
+50
+Enter an element to search in it: 
+51
+This element is not present! 
