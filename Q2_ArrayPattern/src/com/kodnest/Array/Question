@@ -1,0 +1,80 @@
+========================================================= QUESTION =============================================================
+
+Write a java program to print the Array in the following Manner:
+
+Scenario: User wants to create a  3 * 3 Array where he want to print the Array elements in the following Manner.
+
+a11 a12 a13 a23 a33 a32 a31 a21 a22
+
+Sample Input:  1 2 3
+			   4 5 6
+			   7 8 9
+	 
+Sample Output: 1 2 3 6 9 8 7 4 5
+
+========================================================== SOLUTION ============================================================
+
+package com.kodnest.Array;
+import java.util.Scanner;
+
+public class ArrayPattern {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Number of Rows");
+		int rows = scan.nextInt();
+		System.out.println("Enter Number of Columns");
+		int cols = scan.nextInt();
+		int arr[][] = new int[rows][cols];
+		
+		System.out.println("Enter "+(rows*cols)+" Elements");
+		for(int i =0;i<=arr.length-1;i++)
+		{
+			for(int j = 0;j<=arr[i].length-1;j++)
+			{
+				arr[i][j] = scan.nextInt();
+			}
+		}
+		System.out.println("================================");
+		for(int k = 0;k<=cols-1;k++)
+		{
+			System.out.print(arr[0][k]+" ");
+		}
+		
+		for(int k = 1;k<=rows-1;k++)
+		{
+			System.out.print(arr[k][cols-1]+" ");
+		}
+		
+		
+		for(int k =cols-2; k >= 0; k--)
+		{
+			System.out.print(arr[rows-1][k]+" ");
+		}
+
+		for(int k = rows-2; k>=1;k--)
+		{
+			System.out.print(arr[k][0]+" ");
+		}
+		
+		for(int k = 1;k<=cols-2;k++)
+		{
+			System.out.print(arr[1][k]);
+		}
+	}
+
+}
+
+============================================================ OUTPUT ============================================================
+
+Enter Number of Rows
+3 
+Enter Number of Columns
+3
+Enter 9 Elements
+1 2 3
+4 5 6
+7 8 9
+================================
+1 2 3 6 9 8 7 4 5
