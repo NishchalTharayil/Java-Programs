@@ -1,0 +1,48 @@
+=========================================================== QUESTION ==========================================================
+
+Write a Java Program to convert first letter of every word into capital letter. 
+
+Sample Input: Hello my name is nishchal
+Sample Output: Hello My Name Is Nishchal
+
+=========================================================== SOLUTION ===========================================================
+
+package com.kodnest.Strings;
+import java.util.Scanner;
+
+public class InitCapital {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a Sentence");
+		String str = scan.nextLine();
+		char arr[] = str.toCharArray();
+		
+		for(int i = 0; i <= arr.length-1; i++)
+		{
+			int temp=arr[i];
+			if(arr[i] == ' ' )
+			{
+				temp = arr[i+1];
+				if(temp >= 97 && temp <= 122)
+				{
+					temp = temp - 32;
+				}
+				arr[i+1] = (char)temp;
+			}
+			
+			
+		}
+		str = new String(arr);
+		System.out.println(str);
+	}
+
+}
+
+
+============================================================= OUTPUT ==========================================================
+
+Enter a Sentence
+Hello my name is nishchal
+Hello My Name Is Nishchal
