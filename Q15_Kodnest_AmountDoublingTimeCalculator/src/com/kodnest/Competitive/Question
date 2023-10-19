@@ -1,0 +1,47 @@
+========================================================== QUESTION ============================================================
+
+Investment Doubling Time Calculator
+
+You are tasked with creating a Java program that calculates how many years it takes for an investment to double,
+at a given annual interest rate using a while loop. Keep in mind that the solution should not involve complex operations,
+arrays, inbuilt methods, or string functions
+
+Sample Input: 0.06
+			  1000
+
+Sample Output: It takes 12 years for the investment to double.
+
+============================================================ SOLUTION ==========================================================
+
+package com.kodnest.Competitive;
+import java.util.Scanner;
+
+public class AmountDoublingTimeCalculator {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter interest rate");
+		double interest = scan.nextDouble();
+		System.out.println("Enter the Amount ");
+		double amount = scan.nextInt();
+		double goal = amount * 2;
+		int year = 0;
+		
+		while(amount<goal)
+		{
+			amount = amount + (amount * interest);
+			year++;
+		}
+		System.out.println("It takes "+year+" years for the investment to double.");
+	}
+
+}
+
+=========================================================== OUTPUT =============================================================
+
+Enter interest rate
+0.06
+Enter the Amount 
+1000
+It takes 12 years for the investment to double.
